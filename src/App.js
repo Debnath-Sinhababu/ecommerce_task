@@ -1,11 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Productlist from './productlist';
+import { Routes, Route, Link } from "react-router-dom";
+import Summery from './summery';
+import Thankyou from './Thankyou';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Routes>
+      <Route
+      path='/' element={<Productlist/>}
+      />
+     <Route
+      path='/checkout' element={<Summery/>}
+      />
+      <Route
+      path='/thankyou' element={<Thankyou/>}
+      />
+    </Routes>
   );
 }
 
